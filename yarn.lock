@@ -1278,6 +1278,12 @@ rollup-pluginutils@^1.5.0:
     estree-walker "^0.2.1"
     minimatch "^3.0.2"
 
+rollup-watch:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/rollup-watch/-/rollup-watch-2.5.0.tgz#852d660ddecc51696890aa8c22e95ed4558cc5f7"
+  dependencies:
+    semver "^5.1.0"
+
 rollup@^0.36.3:
   version "0.36.3"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.36.3.tgz#c89ac479828924ff8f69c1d44541cb4ea2fc11fc"
@@ -1293,6 +1299,10 @@ run-async@^0.1.0:
 rx-lite@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/rx-lite/-/rx-lite-3.1.2.tgz#19ce502ca572665f3b647b10939f97fd1615f102"
+
+semver@^5.1.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
 
 shelljs@^0.7.5:
   version "0.7.5"

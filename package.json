@@ -7,6 +7,7 @@
   "jsnext:main": "dist/elixir.mjs",
   "scripts": {
     "build": "rollup -c",
+    "watch": "rollup -wc",
     "lint": "eslint --ext .js,.vue ./"
   },
   "repository": {
@@ -30,6 +31,7 @@
     "eslint-plugin-promise": "^3.3.0",
     "eslint-plugin-standard": "^2.0.1",
     "rollup": "^0.36.3",
-    "rollup-plugin-babel": "^2.6.1"
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-watch": "^2.5.0"
   }
 }

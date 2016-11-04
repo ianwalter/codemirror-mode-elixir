@@ -1,28 +1,49 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+  <div class="bgElixir heightFull colorElixir paddingLeft20 paddingRight20">
+    <site-header></site-header>
+    <home></home>
+    <site-footer></site-footer>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import SiteHeader from './components/SiteHeader'
+import Home from './components/Home'
+import SiteFooter from './components/SiteFooter'
 
 export default {
   name: 'app',
-  components: {
-    Hello
-  }
+  components: { SiteHeader, Home, SiteFooter }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+  html,
+  body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .colorElixir {
+    color: #42275a;
+  }
+
+  a.link,
+  a:visited.link {
+    color: #42275a;
+    border-bottom: 2px solid #42275a;
+    transition: all 0.2s ease-in;
+  }
+  a:hover.link {
+    color: #111;
+    border-bottom: 2px solid #111;
+  }
+
+  .bgElixir {
+    background: #9D50BB; /* fallback for old browsers */
+    background: -webkit-linear-gradient(0, #9D50BB , #6E48AA); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(0, #9D50BB , #6E48AA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
 </style>
