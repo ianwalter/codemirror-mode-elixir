@@ -1,2 +1,2 @@
-# codemirror-mode-elixir
-A CodeMirror mode for the Elixir language
+# Elixir mode for CodeMirror
+> 
