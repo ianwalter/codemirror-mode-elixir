@@ -69,6 +69,8 @@
     "shelljs": "^0.7.4",
     "sinon": "^1.17.3",
     "sinon-chai": "^2.8.0",
+    "svgo-loader": "^1.1.2",
+    "text-loader": "^0.0.1",
     "url-loader": "^0.5.7",
     "vue-loader": "^9.4.0",
     "vue-style-loader": "^1.0.0",

@@ -1,5 +1,5 @@
 <template>
-  <div class="bgElixir heightFull colorElixir paddingLeft20 paddingRight20">
+  <div class="heightFull colorElixir paddingLeft20 paddingRight20">
     <site-header></site-header>
     <home></home>
     <site-footer></site-footer>
@@ -18,32 +18,47 @@ export default {
 </script>
 
 <style lang="scss">
+  html {
+    overflow: hidden;
+  }
+
   html,
   body {
     height: 100%;
     padding: 0;
     margin: 0;
+  }
+
+  body {
+    overflow: auto;
     font-family: 'Montserrat', sans-serif;
+    background: #9D50BB; /* fallback for old browsers */
+    background: -webkit-linear-gradient(0, #9D50BB , #6E48AA); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(0, #9D50BB , #6E48AA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
   .colorElixir {
-    color: #33214A;
+    color: #27162C;
+  }
+  .fillElixir {
+    fill: #27162C;
+  }
+
+  a:hover .fillElixir {
+    fill: #000;
+    transition: all 0.2s ease-in;
   }
 
   a.link,
   a:visited.link {
-    color: #33214A;
-    border-bottom: 2px solid #33214A;
+    color: #27162C;
+    border-bottom: 2px solid #27162C;
     transition: all 0.2s ease-in;
   }
   a:hover.link {
-    color: #111;
-    border-bottom: 2px solid #111;
-  }
-
-  .bgElixir {
-    background: #9D50BB; /* fallback for old browsers */
-    background: -webkit-linear-gradient(0, #9D50BB , #6E48AA); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(0, #9D50BB , #6E48AA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #000;
+    border-bottom: 2px solid #000;
   }
 </style>
