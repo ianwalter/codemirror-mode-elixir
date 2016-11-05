@@ -12,7 +12,7 @@ export default {
     {
       dest: pkg['main'],
       format: 'umd',
-      moduleName: 'codemirrorModeElixir'
+      moduleName: 'registerElixirMode'
     },
     {
       dest: pkg['jsnext:main'],
