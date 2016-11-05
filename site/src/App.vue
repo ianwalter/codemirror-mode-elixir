@@ -27,13 +27,13 @@ export default {
   }
 
   .colorElixir {
-    color: #42275a;
+    color: #33214A;
   }
 
   a.link,
   a:visited.link {
-    color: #42275a;
-    border-bottom: 2px solid #42275a;
+    color: #33214A;
+    border-bottom: 2px solid #33214A;
     transition: all 0.2s ease-in;
   }
   a:hover.link {
