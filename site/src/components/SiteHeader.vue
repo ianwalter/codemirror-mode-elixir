@@ -1,24 +1,24 @@
 <template>
   <header>
-    <section class="textCenter paddingTop50">
+    <section class="paddingTop50">
 
       <div class="displayTable maxWidth900 marginLeftAuto marginRightAuto">
 
-        <div class="displayTableCell width100 verticalMiddle textCenter">
-          <a href="https://github.com/optick/codemirror-mode-elixir">
-            <div class="width80 height80 fillElixir" v-html="githubSvg"></div>
-          </a>
-        </div>
-
-        <div class="displayTableCell widthTwelve paddingRight100
-                    verticalMiddle">
+        <div class="displayTableCell widthTwelve verticalMiddle">
           <h1 class="marginBottom10 marginTop0">
             codemirror-mode-elixir
           </h1>
-          <div class="fontSize22 weight500">
+          <div class="fontSize18 weight500">
             A CodeMirror mode for the Elixir language by
-            <a href="https://optick.io/" class="link">Optick</a>
+            <a href="https://optick.io/" class="link colorAlto">Optick</a>
           </div>
+        </div>
+
+        <div class="displayTableCell width100 verticalMiddle textCenter">
+          <a class="link"
+             href="https://github.com/optick/codemirror-mode-elixir">
+            <div class="width80 height80 fillElixir" v-html="githubSvg"></div>
+          </a>
         </div>
 
     </section>

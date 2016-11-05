@@ -1,5 +1,6 @@
 <template>
   <footer class="textCenter paddingTop50 paddingBottom100">
-    &copy; 2016 Ian Walter and others. All rights reserved.
+    &copy; 2016 <a class="link" href="https://iankwalter.com">Ian Walter</a> and
+    others. All rights reserved.
   </footer>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div class="heightFull colorElixir paddingLeft20 paddingRight20">
+  <div class="heightFull paddingLeft20 paddingRight20">
     <site-header></site-header>
     <home></home>
     <site-footer></site-footer>
@@ -31,6 +31,7 @@ export default {
 
   body {
     overflow: auto;
+    color: #C694E8;
     font-family: 'Montserrat', sans-serif;
     background: #9D50BB; /* fallback for old browsers */
     background: -webkit-linear-gradient(0, #9D50BB , #6E48AA); /* Chrome 10-25, Safari 5.1-6 */
@@ -39,26 +40,16 @@ export default {
     background-attachment: fixed;
   }
 
-  .colorElixir {
-    color: #27162C;
-  }
-  .fillElixir {
-    fill: #27162C;
-  }
-
-  a:hover .fillElixir {
-    fill: #000;
-    transition: all 0.2s ease-in;
-  }
-
   a.link,
   a:visited.link {
-    color: #27162C;
-    border-bottom: 2px solid #27162C;
-    transition: all 0.2s ease-in;
+    color: #C694E8;
+    fill: currentColor;
+    border-bottom: 2px solid currentColor;
+    transition: all 500ms ease-in-out;
   }
   a:hover.link {
-    color: #000;
-    border-bottom: 2px solid #000;
+    color: #eee;
+    fill: currentColor;
+    border-color: currentColor;
   }
 </style>

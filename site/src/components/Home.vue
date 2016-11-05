@@ -8,12 +8,19 @@
 
     <section class="textCenter paddingTop20 paddingBottom20">
 
-      <a @click="toggleUsageInstructions" class="button bgPink">
-        Show Usage Instructions
+      <a @click="toggleUsageInstructions"
+         class="button showUsageInstructionsButton">
+        {{ usageInstructionsAction }} Usage Instructions
       </a>
 
-      <div v-if="showUsageInstructions" class="usageInstructions">
-        Hello
+      <div v-if="showUsageInstructions"
+           class="textLeft paddingTop20">
+        Include dist/elixir.js into your project.
+        <br>
+        Call the registerElixirMode function with the CodeMirror instance as
+        and argument.
+        <br>
+        Set 'text/x-elixir' as the mode when creating the editor.
       </div>
 
     </section>
@@ -37,6 +44,11 @@
         theme: 'material'
       })
     },
+    computed: {
+      usageInstructionsAction () {
+        return this.showUsageInstructions ? 'Hide' : 'Show'
+      }
+    },
     methods: {
       toggleUsageInstructions () {
         this.showUsageInstructions = !this.showUsageInstructions
@@ -58,6 +70,7 @@
   }
 
   .editor {
+    color: #1E0F24;
     height: auto;
     padding: 1em;
     font-size: 1.25em;
@@ -67,9 +80,13 @@
     box-shadow: 0 0 5px 0;
   }
 
-  .bgPink {
+  .showUsageInstructionsButton {
     border-radius: 20px;
     padding: 12px 16px;
-    background-color: #27162C;
+    background-color: #a873d1;
+    transition: all 500ms ease-in-out;
+  }
+  a:hover.showUsageInstructionsButton {
+    background-color: #C694E8;
   }
 </style>
