@@ -15,7 +15,7 @@
 
     <!-- Usage instructions -->
     <transition name="slide-down">
-      <section v-show="showUsageInstructions || true"
+      <section v-show="showUsageInstructions"
                class="textLeft usageInstructions">
 
         <!-- Step one -->
@@ -24,7 +24,7 @@
           <div class="fontWeight600 width30">1.</div>
 
           <div class="flex1">
-            Install codemirror-mode elixir from NPM: <code>npm install
+            Install codemirror-mode elixir from NPM: <code class="padding4">npm install
             codemirror-mode-elixir</code>
           </div>
 
@@ -100,6 +100,7 @@
 </template>
 
 <script>
+  import Vue from 'vue'
   import CodeMirror from 'codemirror'
   import '../../node_modules/codemirror/mode/javascript/javascript'
   import '../../node_modules/codemirror/mode/htmlmixed/htmlmixed'
@@ -128,12 +129,12 @@
       create
     }),
     mounted () {
-      CodeMirror.fromTextArea(document.getElementById('code'), elixirOpts)
-      CodeMirror.fromTextArea(document.getElementById('import'), jsOpts)
-      CodeMirror.fromTextArea(document.getElementById('script'), htmlOpts)
-      CodeMirror.fromTextArea(document.getElementById('register'), jsOpts)
-      CodeMirror.fromTextArea(document.getElementById('iif'), htmlOpts)
-      CodeMirror.fromTextArea(document.getElementById('create'), jsOpts)
+      CodeMirror.fromTextArea(document.querySelector('#code'), elixirOpts)
+      CodeMirror.fromTextArea(document.querySelector('#import'), jsOpts)
+      CodeMirror.fromTextArea(document.querySelector('#script'), htmlOpts)
+      CodeMirror.fromTextArea(document.querySelector('#register'), jsOpts)
+      CodeMirror.fromTextArea(document.querySelector('#iif'), htmlOpts)
+      CodeMirror.fromTextArea(document.querySelector('#create'), jsOpts)
     },
     computed: {
       usageInstructionsAction () {
@@ -143,6 +144,13 @@
     methods: {
       toggleUsageInstructions () {
         this.showUsageInstructions = !this.showUsageInstructions
+        if (this.showUsageInstructions) {
+          Vue.nextTick(() => {
+            for (let el of document.querySelectorAll('.CodeMirror')) {
+              el.CodeMirror.refresh()
+            }
+          })
+        }
       }
     }
   }

@@ -53,4 +53,13 @@ export default {
     fill: currentColor;
     border-color: currentColor;
   }
+
+  footer::selection,
+  h1::selection,
+  div::selection,
+  a::selection,
+  code::selection {
+    color: #ddd;
+    background: #482292;
+  }
 </style>
