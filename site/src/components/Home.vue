@@ -145,8 +145,9 @@
       toggleUsageInstructions () {
         this.showUsageInstructions = !this.showUsageInstructions
         if (this.showUsageInstructions) {
+          const selector = '.usageInstructions .CodeMirror'
           Vue.nextTick(() => {
-            for (let el of document.querySelectorAll('.CodeMirror')) {
+            for (let el of document.querySelectorAll(selector)) {
               el.CodeMirror.refresh()
             }
           })

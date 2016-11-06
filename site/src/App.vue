@@ -43,14 +43,16 @@ export default {
 
   a.link,
   a:visited.link {
-    color: #C694E8;
-    fill: currentColor;
+    color: rgba(198, 148, 232, 1);
+    fill: rgba(198, 148, 232, 1);
     border-bottom: 2px solid currentColor;
-    transition: all 500ms ease-in-out;
+    transition: color 0.5s ease-in-out,
+                fill 0.5s ease-in-out,
+                border-color 0.5s ease-in-out,
   }
   a:hover.link {
-    color: #eee;
-    fill: currentColor;
+    color: rgba(238, 238, 238, 1);
+    fill: rgba(238, 238, 238, 1);
     border-color: currentColor;
   }
 
