@@ -1,4 +1,4 @@
-export default `# Some code examples borrowed from https://learnxinyminutes.com/docs/elixir/
+export const code = `# Some code examples borrowed from https://learnxinyminutes.com/docs/elixir/
 
 # Module
 defmodule MyModule do
@@ -38,3 +38,16 @@ defmodule MyModule do
   end
 end
 `
+
+export const htmlScript = `<!-- You can simply add elixir.js as a script tag: -->
+<script src="js/codemirror.js"></script>
+<script src="js/codemirror-mode-elixir/dist/elixir.js"></script>
+<script>
+  (function() { registerElixirMode(CodeMirror) })()
+</script>`
+
+export const jsImport = `// If you're using frontend build tools like Webpack and Babel,
+// you can simply import the module and register the mode:
+import CodeMirror from 'codemirror'
+import registerElixirMode from 'codemirror-mode-elixir'
+registerElixirMode(CodeMirror)`

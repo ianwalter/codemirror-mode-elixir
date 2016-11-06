@@ -1,48 +1,81 @@
 <template>
   <div>
     <section>
-      <form class="editor maxWidth900">
+      <form class="editor borderRadius padding20 marginTop50 marginBottom50">
         <textarea id="code">{{ code }}</textarea>
       </form>
     </section>
 
     <section class="textCenter paddingTop20 paddingBottom20">
-
       <a @click="toggleUsageInstructions"
          class="button showUsageInstructionsButton">
         {{ usageInstructionsAction }} Usage Instructions
       </a>
+    </section>
 
-      <div v-if="showUsageInstructions"
-           class="textLeft paddingTop20">
-        Include dist/elixir.js into your project.
+    <transition name="slide-down">
+      <section v-show="showUsageInstructions || true"
+               class="textLeft usageInstructions">
+
+        <div class="displayFlex">
+          <div class="fontWeight600 width30 fontSize18">
+            1.
+          </div>
+          <div class="flex1">
+            Include <code>codemirror-mode-elixir</code> into your project.
+          </div>
+        </div>
+
+        <div class="displayFlex">
+          <div class="width30"></div>
+          <div class="flex1">
+            <form class="editor borderRadius3 padding10">
+              <textarea id="import">{{ jsImport }}</textarea>
+            </form>
+            <div class="marginTop15 marginBottom15">
+              Or
+            </div>
+            <form class="editor borderRadius3 padding10">
+              <textarea id="script">{{ htmlScript }}</textarea>
+            </form>
+          </div>
+        </div>
+
         <br>
         Call the registerElixirMode function with the CodeMirror instance as
         and argument.
         <br>
         Set 'text/x-elixir' as the mode when creating the editor.
-      </div>
 
-    </section>
+      </section>
+    </transition>
   </div>
 </template>
 
 <script>
   import CodeMirror from 'codemirror'
+  import '../../node_modules/codemirror/mode/javascript/javascript'
+  import '../../node_modules/codemirror/mode/htmlmixed/htmlmixed'
   import registerElixirMode from '../../../dist/elixir'
-  import code from '../code'
+  import { code, htmlScript, jsImport } from '../code'
 
   registerElixirMode(CodeMirror)
 
+  const htmlOpts = {
+    mode: 'htmlmixed',
+    lineNumbers: true,
+    indentUnit: 2,
+    theme: 'material'
+  }
+  const jsOpts = Object.assign({}, htmlOpts, { mode: 'javascript' })
+  const elixirOpts = Object.assign({}, htmlOpts, { mode: 'text/x-elixir' })
+
   export default {
-    data: () => ({ showUsageInstructions: false, code }),
+    data: () => ({ showUsageInstructions: false, code, htmlScript, jsImport }),
     mounted () {
-      CodeMirror.fromTextArea(document.getElementById('code'), {
-        mode: 'text/x-elixir',
-        lineNumbers: true,
-        indentUnit: 2,
-        theme: 'material'
-      })
+      CodeMirror.fromTextArea(document.getElementById('code'), elixirOpts)
+      CodeMirror.fromTextArea(document.getElementById('import'), jsOpts)
+      CodeMirror.fromTextArea(document.getElementById('script'), htmlOpts)
     },
     computed: {
       usageInstructionsAction () {
@@ -70,14 +103,10 @@
   }
 
   .editor {
-    color: #1E0F24;
     height: auto;
-    padding: 1em;
     font-size: 1.25em;
     background-color: #263238;
-    margin: 3em auto;
-    border-radius: 3px;
-    box-shadow: 0 0 5px 0;
+    box-shadow: 0 0 5px 0 #263238;
   }
 
   .showUsageInstructionsButton {
@@ -88,5 +117,23 @@
   }
   a:hover.showUsageInstructionsButton {
     background-color: #C694E8;
+  }
+
+  .usageInstructions {
+      transition: all 500ms;
+      height: auto;
+      overflow: hidden;
+      padding-top: 50px;
+  }
+  .usageInstructions.slide-down-enter, .usageInstructions.slide-down-leave {
+      height: 0;
+      padding-top: 0;
+      opacity: 0;
+  }
+
+  code {
+    background-color: rgba(168,115,209, .3);
+    color: #D9A2FE;
+    border: 1px solid rgba(168,115,209, .6);
   }
 </style>

@@ -1,5 +1,6 @@
 <template>
-  <div class="heightFull paddingLeft20 paddingRight20">
+  <div class="heightFull paddingLeft20 paddingRight20 maxWidth900
+              marginLeftAuto marginRightAuto">
     <site-header></site-header>
     <home></home>
     <site-footer></site-footer>
