@@ -355,8 +355,6 @@ var index = (function (CodeMirror) {
       lineComment: '#'
     };
   });
-
-  CodeMirror.defineMIME('text/x-elixir', 'elixir');
 });
 
 export default index;

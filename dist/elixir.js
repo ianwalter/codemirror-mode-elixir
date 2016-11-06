@@ -361,8 +361,6 @@ var index = (function (CodeMirror) {
       lineComment: '#'
     };
   });
-
-  CodeMirror.defineMIME('text/x-elixir', 'elixir');
 });
 
 return index;

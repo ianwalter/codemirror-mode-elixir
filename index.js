@@ -376,6 +376,4 @@ export default CodeMirror => {
     }
   })
 
-  CodeMirror.defineMIME('text/x-elixir', 'elixir')
-
 }

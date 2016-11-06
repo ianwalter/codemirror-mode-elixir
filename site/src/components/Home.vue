@@ -13,39 +13,86 @@
       </a>
     </section>
 
+    <!-- Usage instructions -->
     <transition name="slide-down">
       <section v-show="showUsageInstructions || true"
                class="textLeft usageInstructions">
 
-        <div class="displayFlex">
-          <div class="fontWeight600 width30 fontSize18">
-            1.
-          </div>
+        <!-- Step one -->
+        <div class="displayFlex marginBottom40">
+
+          <div class="fontWeight600 width30">1.</div>
+
           <div class="flex1">
-            Include <code>codemirror-mode-elixir</code> into your project.
+            Install codemirror-mode elixir from NPM: <code>npm install
+            codemirror-mode-elixir</code>
           </div>
+
         </div>
 
-        <div class="displayFlex">
-          <div class="width30"></div>
+        <!-- Step two -->
+        <div class="displayFlex marginBottom40">
+
+          <div class="fontWeight600 width30">2.</div>
+
           <div class="flex1">
-            <form class="editor borderRadius3 padding10">
+
+            Include codemirror-mode-elixir into your project.
+
+            <form class="editor borderRadius3 padding10 marginTop20">
               <textarea id="import">{{ jsImport }}</textarea>
             </form>
-            <div class="marginTop15 marginBottom15">
-              Or
-            </div>
+
+            <div class="marginTop20 marginBottom20">Or</div>
+
             <form class="editor borderRadius3 padding10">
               <textarea id="script">{{ htmlScript }}</textarea>
             </form>
+
           </div>
+
         </div>
 
-        <br>
-        Call the registerElixirMode function with the CodeMirror instance as
-        and argument.
-        <br>
-        Set 'text/x-elixir' as the mode when creating the editor.
+        <!-- Step three -->
+        <div class="displayFlex marginBottom40">
+
+          <div class="fontWeight600 width30 fontSize18">3.</div>
+
+          <div class="flex1">
+
+            Call the registerElixirMode function with the CodeMirror instance as
+            and argument.
+
+            <form class="editor borderRadius3 padding10 marginTop20">
+              <textarea id="register">{{ register }}</textarea>
+            </form>
+
+            <div class="marginTop20 marginBottom20">Or</div>
+
+            <form class="editor borderRadius3 padding10">
+              <textarea id="iif">{{ iif }}</textarea>
+            </form>
+
+          </div>
+
+        </div>
+
+        <!-- Step four -->
+        <div class="displayFlex marginBottom40">
+
+          <div class="fontWeight600 width30 fontSize18">4.</div>
+
+          <div class="flex1">
+
+            Set 'elixir' as the mode when creating the CodeMirror editor.
+
+            <form class="editor borderRadius3 padding10 marginTop20">
+              <textarea id="create">{{ create }}</textarea>
+            </form>
+
+          </div>
+
+        </div>
 
       </section>
     </transition>
@@ -57,7 +104,7 @@
   import '../../node_modules/codemirror/mode/javascript/javascript'
   import '../../node_modules/codemirror/mode/htmlmixed/htmlmixed'
   import registerElixirMode from '../../../dist/elixir'
-  import { code, htmlScript, jsImport } from '../code'
+  import { code, htmlScript, jsImport, register, iif, create } from '../code'
 
   registerElixirMode(CodeMirror)
 
@@ -68,14 +115,25 @@
     theme: 'material'
   }
   const jsOpts = Object.assign({}, htmlOpts, { mode: 'javascript' })
-  const elixirOpts = Object.assign({}, htmlOpts, { mode: 'text/x-elixir' })
+  const elixirOpts = Object.assign({}, htmlOpts, { mode: 'elixir' })
 
   export default {
-    data: () => ({ showUsageInstructions: false, code, htmlScript, jsImport }),
+    data: () => ({
+      showUsageInstructions: false,
+      code,
+      htmlScript,
+      jsImport,
+      register,
+      iif,
+      create
+    }),
     mounted () {
       CodeMirror.fromTextArea(document.getElementById('code'), elixirOpts)
       CodeMirror.fromTextArea(document.getElementById('import'), jsOpts)
       CodeMirror.fromTextArea(document.getElementById('script'), htmlOpts)
+      CodeMirror.fromTextArea(document.getElementById('register'), jsOpts)
+      CodeMirror.fromTextArea(document.getElementById('iif'), htmlOpts)
+      CodeMirror.fromTextArea(document.getElementById('create'), jsOpts)
     },
     computed: {
       usageInstructionsAction () {
