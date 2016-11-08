@@ -1,4 +1,9 @@
-site/
 node_modules/
 .git/
 .gitignore
+build/
+src/
+static/
+test/
+config/
+site/

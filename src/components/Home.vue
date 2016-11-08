@@ -104,7 +104,7 @@
   import CodeMirror from 'codemirror'
   import '../../node_modules/codemirror/mode/javascript/javascript'
   import '../../node_modules/codemirror/mode/htmlmixed/htmlmixed'
-  import registerElixirMode from '../../../dist/elixir'
+  import registerElixirMode from '../../dist/elixir'
   import { code, htmlScript, jsImport, register, iif, create } from '../code'
 
   registerElixirMode(CodeMirror)
