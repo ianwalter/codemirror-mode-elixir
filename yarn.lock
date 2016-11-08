@@ -5270,6 +5270,12 @@ source-map@~0.2.0:
   dependencies:
     amdefine ">=0.0.4"
 
+source-map@0.1.34:
+  version "0.1.34"
+  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.1.34.tgz#a7cfe89aec7b1682c3b198d0acfb47d7d090566b"
+  dependencies:
+    amdefine ">=0.0.4"
+
 spdx-correct@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/spdx-correct/-/spdx-correct-1.0.2.tgz#4b3073d933ff51f3912f03ac5519498a4150db40"
@@ -5407,13 +5413,7 @@ supports-color@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-1.2.0.tgz#ff1ed1e61169d06b3cf2d588e188b18d8847e17e"
 
-svgo-loader@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/svgo-loader/-/svgo-loader-1.1.2.tgz#53ec4718523b39dd21195cbe64bc4d973ab98303"
-  dependencies:
-    loader-utils "^0.2.16"
-
-svgo@^0.7.0:
+svgo, svgo@^0.7.0:
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/svgo/-/svgo-0.7.1.tgz#287320fed972cb097e72c2bb1685f96fe08f8034"
   dependencies:
@@ -5424,6 +5424,12 @@ svgo@^0.7.0:
     mkdirp "~0.5.1"
     sax "~1.2.1"
     whet.extend "~0.9.9"
+
+svgo-loader@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/svgo-loader/-/svgo-loader-1.1.2.tgz#53ec4718523b39dd21195cbe64bc4d973ab98303"
+  dependencies:
+    loader-utils "^0.2.16"
 
 swap-case@^1.1.0:
   version "1.1.2"
@@ -5586,6 +5592,15 @@ uglify-js@^2.6, uglify-js@~2.7.3, uglify-js@2.7.x:
 uglify-to-browserify@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz#6e0924d6bda6b5afe349e39a6d632850a0f882b7"
+
+uglifyjs:
+  version "2.4.10"
+  resolved "https://registry.yarnpkg.com/uglifyjs/-/uglifyjs-2.4.10.tgz#632927319fa6a3da3fc91f9773ac27bfe6c3ee92"
+  dependencies:
+    async "~0.2.6"
+    source-map "0.1.34"
+    uglify-to-browserify "~1.0.0"
+    yargs "~1.3.3"
 
 uid-number@~0.0.6:
   version "0.0.6"
@@ -5942,6 +5957,10 @@ yargs@^4.7.1:
     window-size "^0.2.0"
     y18n "^3.2.1"
     yargs-parser "^2.4.1"
+
+yargs@~1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-1.3.3.tgz#054de8b61f22eefdb7207059eaef9d6b83fb931a"
 
 yargs@~3.10.0:
   version "3.10.0"

@@ -6,7 +6,7 @@ let pkg = require('./package.json');
 export default {
   entry: 'index.js',
   plugins: [
-    babel(babelrc()),
+    babel(babelrc({ path: '.rollup.babelrc' })),
   ],
   targets: [
     {

@@ -1,7 +1,7 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
-  (global.codemirrorModeElixir = factory());
+  (global.registerElixirMode = factory());
 }(this, (function () { 'use strict';
 
 // CodeMirror Mode Elixir, copyright (c) by Marijn Haverbeke, Ian Walter, and
