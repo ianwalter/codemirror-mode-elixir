@@ -192,7 +192,8 @@
       overflow: hidden;
       padding-top: 50px;
   }
-  .usageInstructions.slide-down-enter, .usageInstructions.slide-down-leave {
+  .usageInstructions.slide-down-enter,
+  .usageInstructions.slide-down-leave-active {
       height: 0;
       padding-top: 0;
       opacity: 0;
