@@ -8,14 +8,14 @@
 </template>
 
 <script>
-import SiteHeader from './components/SiteHeader'
-import Home from './components/Home'
-import SiteFooter from './components/SiteFooter'
+  import SiteHeader from './components/SiteHeader'
+  import Home from './components/Home'
+  import SiteFooter from './components/SiteFooter'
 
-export default {
-  name: 'app',
-  components: { SiteHeader, Home, SiteFooter }
-}
+  export default {
+    name: 'app',
+    components: { SiteHeader, Home, SiteFooter }
+  }
 </script>
 
 <style lang="scss">
