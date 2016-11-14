@@ -45,13 +45,15 @@
   a:visited.link {
     color: rgba(198, 148, 232, 1);
     fill: rgba(198, 148, 232, 1);
-    border-bottom: 2px solid rgba(198, 148, 232, 0.5);
     transition: color 0.5s ease-in-out,
                 fill 0.5s ease-in-out;
   }
   a:hover.link {
     color: rgba(238, 238, 238, 1);
     fill: rgba(238, 238, 238, 1);
+  }
+  a.link.border {
+    border-bottom: 2px solid rgba(198, 148, 232, 0.5);
   }
 
   footer::selection,

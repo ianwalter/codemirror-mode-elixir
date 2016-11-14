@@ -10,7 +10,7 @@
           </h1>
           <div class="fontSize18 weight500">
             A CodeMirror mode for the Elixir language from
-            <a href="https://optick.io/" class="link colorAlto">Optick</a>
+            <a href="https://optick.io/" class="link border">Optick</a>
           </div>
         </div>
 
