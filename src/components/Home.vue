@@ -24,8 +24,8 @@
           <div class="fontWeight600 width30">1.</div>
 
           <div class="flex1">
-            Install codemirror-mode elixir from NPM: <code class="padding4">npm install
-            codemirror-mode-elixir</code>
+            Install codemirror-mode elixir from NPM:
+            <code class="padding4">npm install codemirror-mode-elixir</code>
           </div>
 
         </div>
@@ -60,30 +60,6 @@
 
           <div class="flex1">
 
-            Call the registerElixirMode function with the CodeMirror instance as
-            and argument.
-
-            <form class="editor borderRadius3 padding10 marginTop20">
-              <textarea id="register">{{ register }}</textarea>
-            </form>
-
-            <div class="marginTop20 marginBottom20">Or</div>
-
-            <form class="editor borderRadius3 padding10">
-              <textarea id="iif">{{ iif }}</textarea>
-            </form>
-
-          </div>
-
-        </div>
-
-        <!-- Step four -->
-        <div class="displayFlex marginBottom40">
-
-          <div class="fontWeight600 width30 fontSize18">4.</div>
-
-          <div class="flex1">
-
             Set 'elixir' as the mode when creating the CodeMirror editor.
 
             <form class="editor borderRadius3 padding10 marginTop20">
@@ -104,10 +80,8 @@
   import CodeMirror from 'codemirror'
   import '../../node_modules/codemirror/mode/javascript/javascript'
   import '../../node_modules/codemirror/mode/htmlmixed/htmlmixed'
-  import registerElixirMode from '../../dist/elixir'
-  import { code, htmlScript, jsImport, register, iif, create } from '../code'
-
-  registerElixirMode(CodeMirror)
+  import '../../dist/elixir'
+  import { code, htmlScript, jsImport, create } from '../code'
 
   const htmlOpts = {
     mode: 'htmlmixed',
@@ -124,16 +98,12 @@
       code,
       htmlScript,
       jsImport,
-      register,
-      iif,
       create
     }),
     mounted () {
       CodeMirror.fromTextArea(document.querySelector('#code'), elixirOpts)
       CodeMirror.fromTextArea(document.querySelector('#import'), jsOpts)
       CodeMirror.fromTextArea(document.querySelector('#script'), htmlOpts)
-      CodeMirror.fromTextArea(document.querySelector('#register'), jsOpts)
-      CodeMirror.fromTextArea(document.querySelector('#iif'), htmlOpts)
       CodeMirror.fromTextArea(document.querySelector('#create'), jsOpts)
     },
     computed: {

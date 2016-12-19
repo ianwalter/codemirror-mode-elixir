@@ -43,16 +43,9 @@ export const htmlScript = `<!-- You can simply add elixir.js as a script tag: --
 <script src="js/codemirror.js"></script>
 <script src="js/codemirror-mode-elixir/dist/elixir.js"></script>`
 
-export const iif = `<!-- Call the global registerElixirMode function after the DOM has loaded: -->
-<script>
-  (function() { registerElixirMode(CodeMirror) })()
-</script>`
-
 export const jsImport = `// If you're using frontend build tools like Webpack and Babel,
 // you can simply import the module and register the mode:
 import CodeMirror from 'codemirror'
-import registerElixirMode from 'codemirror-mode-elixir'`
-
-export const register = `registerElixirMode(CodeMirror)`
+import 'codemirror-mode-elixir'`
 
 export const create = `CodeMirror.fromTextArea(document.getElementById('code'), { mode: 'elixir' })`
