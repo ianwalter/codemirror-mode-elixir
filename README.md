@@ -23,23 +23,7 @@ codemirror-mode-elixir`
   import registerElixirMode from 'codemirror-mode-elixir'
   ```
 
-3. Call the registerElixirMode function with the CodeMirror instance as and
-argument.
-
-  ```html
-  <!-- Call the global registerElixirMode function after the DOM has loaded: -->
-  <script>
-    (function() { registerElixirMode(CodeMirror) })()
-  </script>
-  ```
-
-  or
-
-  ```js
-  registerElixirMode(CodeMirror)
-  ```
-
-4. Set 'elixir' as the mode when creating the CodeMirror editor.
+3. Set 'elixir' as the mode when creating the CodeMirror editor.
 
   ```js
   CodeMirror.fromTextArea(document.getElementById('code'), { mode: 'elixir' })
