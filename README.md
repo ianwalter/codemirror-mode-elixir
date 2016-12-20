@@ -28,3 +28,9 @@ codemirror-mode-elixir`
   ```js
   CodeMirror.fromTextArea(document.getElementById('code'), { mode: 'elixir' })
   ```
+
+<br>
+
+<a href="https://www.netlify.com">
+  <img src="https://www.netlify.com/img/global/badges/netlify-light.svg">
+</a>
