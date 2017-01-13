@@ -32,7 +32,7 @@
 
   body {
     overflow: auto;
-    color: #C694E8;
+    color: rgba(200, 200, 255, 1);
     font-family: 'Montserrat', sans-serif;
     background: #9D50BB; /* fallback for old browsers */
     background: -webkit-linear-gradient(0, #9D50BB , #6E48AA); /* Chrome 10-25, Safari 5.1-6 */
@@ -43,8 +43,8 @@
 
   a.link,
   a:visited.link {
-    color: rgba(198, 148, 232, 1);
-    fill: rgba(198, 148, 232, 1);
+    color: rgba(200, 200, 255, 1);
+    fill: rgba(200, 200, 255, 1);
     transition: color 0.5s ease-in-out,
                 fill 0.5s ease-in-out;
   }
@@ -53,7 +53,7 @@
     fill: rgba(238, 238, 238, 1);
   }
   a.link.border {
-    border-bottom: 2px solid rgba(198, 148, 232, 0.5);
+    border-bottom: 2px solid rgba(200, 200, 255, 0.5);
   }
 
   footer::selection,

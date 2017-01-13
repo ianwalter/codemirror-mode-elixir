@@ -1,7 +1,7 @@
 <template>
   <div>
     <section>
-      <form class="editor borderRadius padding20 marginTop50 marginBottom50">
+      <form class="editor borderRadius padding20 marginTop40 marginBottom40">
         <textarea id="code">{{ code }}</textarea>
       </form>
     </section>
@@ -54,7 +54,7 @@
         </div>
 
         <!-- Step three -->
-        <div class="displayFlex marginBottom40">
+        <div class="displayFlex marginBottom20">
 
           <div class="fontWeight600 width30 fontSize18">3.</div>
 
@@ -146,32 +146,52 @@
     box-shadow: 0 0 5px 0 #263238;
   }
 
+  .button:focus {
+    outline: 0;
+  }
+  .button {
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
+
+    &:hover {
+      box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.30);
+    }
+
+    &:active {
+      transform: scale3d(0.96, 0.96, 1);
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+    }
+  }
+
   .showUsageInstructionsButton {
     border-radius: 20px;
     padding: 12px 16px;
-    background-color: #a873d1;
+    background: #dedcee;
+    color: #6a60a9;
     transition: all 500ms ease-in-out;
   }
   a:hover.showUsageInstructionsButton {
-    background-color: #C694E8;
+    color: #6a60a9;
+    background-color: #fffcf0;
   }
 
   .usageInstructions {
-      transition: all 500ms;
-      height: auto;
-      overflow: hidden;
-      padding-top: 50px;
+    transition: all 500ms;
+    height: auto;
+    overflow: hidden;
+    padding-top: 50px;
   }
   .usageInstructions.slide-down-enter,
   .usageInstructions.slide-down-leave-active {
-      height: 0;
-      padding-top: 0;
-      opacity: 0;
+    height: 0;
+    padding-top: 0;
+    opacity: 0;
   }
 
   code {
-    background-color: rgba(168,115,209, .3);
-    color: #D9A2FE;
-    border: 1px solid rgba(168,115,209, .6);
+    font-size: 14px;
+    letter-spacing: 0.6px;
+    background-color: rgba(217, 167, 255, .2);
+    color: #d3e0f7;
+    border: 1px solid rgba(217, 167, 255, .4);
   }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <header>
-    <section class="paddingTop50">
+    <section class="paddingTop40">
 
       <div class="displayTable marginLeftAuto marginRightAuto">
 
@@ -8,7 +8,7 @@
           <h1 class="marginBottom10 marginTop0">
             codemirror-mode-elixir
           </h1>
-          <div class="fontSize18 weight500">
+          <div class="fontSize18 weight500 lineHeight22">
             A CodeMirror mode for the Elixir language from
             <a href="https://optick.io/" class="link border">Optick</a>
           </div>
