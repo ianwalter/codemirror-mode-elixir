@@ -374,3 +374,5 @@ CodeMirror.defineMode('elixir', config => {
     lineComment: '#'
   }
 })
+
+CodeMirror.defineMIME('text/x-elixir', 'elixir')

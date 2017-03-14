@@ -354,3 +354,5 @@ CodeMirror.defineMode('elixir', function (config) {
     lineComment: '#'
   };
 });
+
+CodeMirror.defineMIME('text/x-elixir', 'elixir');
