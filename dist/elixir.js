@@ -361,4 +361,6 @@ CodeMirror.defineMode('elixir', function (config) {
   };
 });
 
+CodeMirror.defineMIME('text/x-elixir', 'elixir');
+
 })));
