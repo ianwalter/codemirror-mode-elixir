@@ -1,33 +1,36 @@
 # codemirror-mode-elixir
 > A CodeMirror mode for the Elixir language
 
-## Usage instructions
+## Installation
 
-1. Install `codemirror` and `codemirror-mode-elixir` from NPM: `npm install
-codemirror codemirror-mode-elixir`
+```console
+npm install codemirror codemirror-mode-elixir --save
+```
 
-2. Include `codemirror-mode-elixir` into your project.
+## Usage
 
-  ```html
-  <!-- You can simply add elixir.js as a script tag: -->
-  <script src="js/codemirror.js"></script>
-  <script src="js/codemirror-mode-elixir/dist/elixir.js"></script>
-  ```
+1. Include `codemirror-mode-elixir` into your project.
 
-  or
+```html
+<!-- You can simply add elixir.js as a script tag: -->
+<script src="js/codemirror.js"></script>
+<script src="js/codemirror-mode-elixir/dist/elixir.js"></script>
+```
 
-  ```js
-  // If you're using frontend build tools like Webpack and Babel,
-  // you can simply import the module and register the mode:
-  import CodeMirror from 'codemirror'
-  import registerElixirMode from 'codemirror-mode-elixir'
-  ```
+or
 
-3. Set 'elixir' as the mode when creating the CodeMirror editor.
+```js
+// If you're using frontend build tools like Webpack and Babel,
+// you can simply import the module and register the mode:
+import CodeMirror from 'codemirror'
+import registerElixirMode from 'codemirror-mode-elixir'
+```
 
-  ```js
-  CodeMirror.fromTextArea(document.getElementById('code'), { mode: 'elixir' })
-  ```
+1. Set 'elixir' as the mode when creating the CodeMirror editor.
+
+```js
+CodeMirror.fromTextArea(document.getElementById('code'), { mode: 'elixir' })
+```
 
 <br>
 

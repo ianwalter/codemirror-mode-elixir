@@ -1,8 +1,9 @@
 <template>
   <div>
+
     <section>
       <form class="editor borderRadius padding20 marginTop40 marginBottom40">
-        <textarea id="code">{{ code }}</textarea>
+        <textarea id="code" v-model="code" />
       </form>
     </section>
 
@@ -15,6 +16,7 @@
 
     <!-- Usage instructions -->
     <transition name="slide-down">
+
       <section v-show="showUsageInstructions"
                class="textLeft usageInstructions">
 
@@ -40,13 +42,13 @@
             Include codemirror-mode-elixir into your project.
 
             <form class="editor borderRadius3 padding10 marginTop20">
-              <textarea id="import">{{ jsImport }}</textarea>
+              <textarea id="import" v-model="jsImport" />
             </form>
 
             <div class="marginTop20 marginBottom20">Or</div>
 
             <form class="editor borderRadius3 padding10">
-              <textarea id="script">{{ htmlScript }}</textarea>
+              <textarea id="script" v-model="htmlScript" />
             </form>
 
           </div>
@@ -63,7 +65,7 @@
             Set 'elixir' as the mode when creating the CodeMirror editor.
 
             <form class="editor borderRadius3 padding10 marginTop20">
-              <textarea id="create">{{ create }}</textarea>
+              <textarea id="create" v-model="create"></textarea>
             </form>
 
           </div>
@@ -80,7 +82,7 @@
   import CodeMirror from 'codemirror'
   import '../../node_modules/codemirror/mode/javascript/javascript'
   import '../../node_modules/codemirror/mode/htmlmixed/htmlmixed'
-  import '../../dist/elixir'
+  import '../../dist/codemirror-mode-elixir'
   import { code, htmlScript, jsImport, create } from '../code'
 
   const htmlOpts = {

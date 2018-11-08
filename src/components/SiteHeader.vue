@@ -17,20 +17,20 @@
         <div class="displayTableCell width100 verticalMiddle textCenter">
           <a class="link"
              href="https://github.com/optick/codemirror-mode-elixir">
-            <div class="width80 height80 fillElixir" v-html="githubSvg"></div>
+            <github-icon class="width80 height80 fillElixir" />
           </a>
         </div>
+
+      </div>
 
     </section>
   </header>
 </template>
 
 <script>
-  import githubSvg from '../assets/github.svg'
+  import GithubIcon from '@/components/GithubIcon'
 
   export default {
-    data () {
-      return { githubSvg }
-    }
+    components: { GithubIcon }
   }
 </script>
