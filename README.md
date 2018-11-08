@@ -3,10 +3,10 @@
 
 ## Usage instructions
 
-1. Install codemirror-mode elixir from NPM: `npm install
-codemirror-mode-elixir`
+1. Install `codemirror` and `codemirror-mode-elixir` from NPM: `npm install
+codemirror codemirror-mode-elixir`
 
-2. Include codemirror-mode-elixir into your project.
+2. Include `codemirror-mode-elixir` into your project.
 
   ```html
   <!-- You can simply add elixir.js as a script tag: -->
