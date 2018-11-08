@@ -27,7 +27,7 @@
   },
   "author": "Ian Walter <public@iankwalter.com>",
   "license": "MIT",
-  "dependencies": {
+  "peerDependencies": {
     "codemirror": "^5.20.2"
   },
   "devDependencies": {
