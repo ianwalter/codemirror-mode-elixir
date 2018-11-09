@@ -32,7 +32,15 @@ npm install codemirror codemirror-mode-elixir --save
     CodeMirror.fromTextArea(document.getElementById('code'), { mode: 'elixir' })
     ```
 
-<br>
+## License
+
+Apache 2.0 with Commons Clause - See [LICENSE](https://github.com/ianwalter/codemirror-mode-elixir/blob/master/LICENSE)
+
+&nbsp;
+
+Created by [Ian Walter](https://iankwalter.com)
+
+&nbsp;
 
 <a href="https://www.netlify.com">
   <img src="https://www.netlify.com/img/global/badges/netlify-light.svg">

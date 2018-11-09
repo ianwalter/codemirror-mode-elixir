@@ -26,7 +26,7 @@
     "type": "git"
   },
   "author": "Ian Walter <public@iankwalter.com>",
-  "license": "MIT",
+  "license": "Apache 2.0 with Commons Clause",
   "peerDependencies": {
     "codemirror": "^5.20.2"
   },
