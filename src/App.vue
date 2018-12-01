@@ -1,20 +1,46 @@
 <template>
   <div class="heightFull paddingLeft20 paddingRight20 maxWidth900
               marginLeftAuto marginRightAuto">
-    <site-header></site-header>
+
+    <header>
+      <section class="paddingTop40">
+
+        <div class="displayTable marginLeftAuto marginRightAuto">
+
+          <div class="displayTableCell widthTwelve verticalMiddle">
+            <h1 class="marginBottom10 marginTop0">
+              codemirror-mode-elixir
+            </h1>
+            <div class="fontSize18 weight500 lineHeight22">
+              A CodeMirror mode for the Elixir language from
+              <a href="https://optick.io/" class="link border">Optick</a>
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </section>
+    </header>
+
     <home></home>
-    <site-footer></site-footer>
+
+    <footer class="textCenter paddingBottom100">
+      &copy; 2016
+      <a class="link border" href="https://iankwalter.com">Ian Walter</a>.
+      All rights reserved.
+    </footer>
+
   </div>
 </template>
 
 <script>
-  import SiteHeader from './components/SiteHeader'
   import Home from './components/Home'
-  import SiteFooter from './components/SiteFooter'
 
   export default {
     name: 'app',
-    components: { SiteHeader, Home, SiteFooter }
+    components: { Home }
   }
 </script>
 

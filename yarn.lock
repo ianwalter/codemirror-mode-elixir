@@ -583,6 +583,11 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@ianwalter/sled@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@ianwalter/sled/-/sled-1.0.2.tgz#f72ed974cf7b5c19b70eac41cad6844e1c91425d"
+  integrity sha512-zsL1EMI6mTBgs2x5GIm4W9EQX4I0QS60Fw6qRB3oC6mIL8EW6uPjWemTiYJMCr5wtIITwaRPghIfWewqUO82ZQ==
+
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@samverschueren/stream-to-observable/-/stream-to-observable-0.3.0.tgz#ecdf48d532c58ea477acfcab80348424f8d0662f"
@@ -2128,6 +2133,11 @@ commander@~2.13.0:
   version "2.13.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.13.0.tgz#6964bca67685df7c1f1430c584f07d7597885b9c"
   integrity sha512-MVuS359B+YzaWqjCL/c+22gfryv+mCBPHAv3zyVI2GN8EY6IRP8VwtasXn8jyyhvvq84R4ImN1OKRtcbIasjYA==
+
+common-tags@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/common-tags/-/common-tags-1.8.0.tgz#8e3153e542d4a39e9b10554434afaaf98956a937"
+  integrity sha512-6P6g0uetGpW/sdyUy/iQQCbFF0kWVMSIVSyYz7Zgjcgh8mgw8PQzDNZeyZ5DQ2gM7LBoZPHmnjz8rUthkBG5tw==
 
 commondir@^1.0.1:
   version "1.0.1"

@@ -1,5 +1,5 @@
 # codemirror-mode-elixir
-> A CodeMirror mode for the Elixir language
+> A [CodeMirror][codemirrorUrl] mode for the Elixir language
 
 ## Installation
 
@@ -40,10 +40,5 @@ MIT - See [LICENSE][licenseUrl]
 
 Created by [Ian Walter](https://iankwalter.com)
 
-&nbsp;
-
-<a href="https://www.netlify.com">
-  <img src="https://www.netlify.com/img/global/badges/netlify-light.svg">
-</a>
-
+[codemirrorUrl]: https://codemirror.net/
 [licenseUrl]: https://github.com/ianwalter/codemirror-mode-elixir/blob/master/LICENSE
