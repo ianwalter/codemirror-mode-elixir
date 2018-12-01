@@ -34,7 +34,7 @@ npm install codemirror codemirror-mode-elixir --save
 
 ## License
 
-Apache 2.0 with Commons Clause - See [LICENSE](https://github.com/ianwalter/codemirror-mode-elixir/blob/master/LICENSE)
+MIT - See [LICENSE][licenseUrl]
 
 &nbsp;
 
@@ -45,3 +45,5 @@ Created by [Ian Walter](https://iankwalter.com)
 <a href="https://www.netlify.com">
   <img src="https://www.netlify.com/img/global/badges/netlify-light.svg">
 </a>
+
+[licenseUrl]: https://github.com/ianwalter/codemirror-mode-elixir/blob/master/LICENSE
