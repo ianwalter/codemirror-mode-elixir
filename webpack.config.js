@@ -1,47 +1,62 @@
 const { join } = require('path')
 
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 const isProduction = process.env.NODE_ENV === 'production'
-const src = join(__dirname, 'src')
+const site = join(__dirname, 'site')
+const cssProcessorOptions = { discardComments: { removeAll: true } }
+const cssLoaderOptions = { importLoaders: isProduction ? 1 : 0 }
 
-module.exports = {
+module.exports = (env = {}) => ({
   mode: isProduction ? 'production' : 'development',
-  entry: join(__dirname, 'src/main.js'),
+  entry: join(site, 'main.js'),
   output: {
-    path: join(__dirname, 'site'),
-    filename: 'js/[name].bundle.js',
-    chunkFilename: 'js/[id].[chunkhash].js'
+    path: join(site, 'dist'),
+    filename: 'js/[name].bundle.js'
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      '@': src
+      '@': site
     }
-  },
-  module: {
-    rules: [
-      { test: /\.js$/, include: src, loader: 'babel-loader' },
-      { test: /\.vue$/, include: src, loader: 'vue-loader' },
-      {
-        test: /\.s?css$/,
-        include: src,
-        use: [
-          isProduction ? MiniCssExtractPlugin.loader : 'vue-style-loader',
-          {
-            loader: 'css-loader',
-            options: { importLoaders: 1 }
-          },
-          'sass-loader'
-        ]
-      }
-    ]
   },
   plugins: [
     new VueLoaderPlugin(),
-    new HtmlWebpackPlugin({ template: './src/index.html' }),
-    ...(isProduction ? [new MiniCssExtractPlugin()] : [])
-  ]
-}
+    ...(env.singleRun ? [
+      new CleanWebpackPlugin(['site/dist'])
+    ] : []),
+    new HtmlWebpackPlugin({ template: './site/index.html' }),
+    ...(isProduction ? [
+      new OptimizeCssAssetsPlugin({ cssProcessorOptions }),
+      new MiniCssExtractPlugin({ filename: 'css/[name].[hash].css' })
+    ] : [])
+  ],
+  module: {
+    rules: [
+      { test: /\.js$/, include: site, loader: 'babel-loader' },
+      { test: /\.vue$/, include: site, loader: 'vue-loader' },
+      {
+        test: /\.css$/,
+        use: [
+          isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
+          { loader: 'css-loader', options: cssLoaderOptions },
+          ...(isProduction ? [
+            {
+              loader: '@fullhuman/purgecss-loader',
+              options: {
+                content: [join(site, 'index.html')],
+                whitelistPatterns: [
+                  /hljs/
+                ]
+              }
+            }
+          ] : [])
+        ]
+      }
+    ]
+  }
+})
